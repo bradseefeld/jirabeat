@@ -4,4 +4,30 @@
 
 jirabeat:
   # Defines how often an event is sent to the output
-  period: 1s
+  period: 3600s
+
+  # Authentication for your Jira instance. If no authentication is needed, omit or leave blank.
+  authentication:
+    username: "${JIRA_USERNAME}"
+    password: "${JIRA_PASSWORD}"
+
+  # The URL to your Jira instance.
+  url: "${JIRA_URL}"
+
+  # Which labels you want to the beat to collect number of tickets open/closed
+  labels:
+    - techdebt
+    - hotfix
+
+  statuses:
+
+    # The statuses that represent a ticket being 'open'
+    open:
+      - Open
+      - In Progress
+      - Todo
+      - Pending
+      - New
+      - Code Review
+      - Test
+      - Testing
