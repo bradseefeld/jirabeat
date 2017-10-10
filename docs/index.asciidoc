@@ -1,0 +1,5 @@
+= Jirabeat Docs
+
+Welcome to the Jirabeat documentation.
+
+
